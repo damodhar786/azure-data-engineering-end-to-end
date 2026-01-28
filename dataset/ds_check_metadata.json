@@ -1,0 +1,70 @@
+{
+	"name": "ds_check_metadata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_sql_ingestion_metadata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "metadata_id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "source_name",
+				"type": "varchar"
+			},
+			{
+				"name": "entity_name",
+				"type": "varchar"
+			},
+			{
+				"name": "file_name",
+				"type": "varchar"
+			},
+			{
+				"name": "business_date",
+				"type": "date"
+			},
+			{
+				"name": "file_hash",
+				"type": "varchar"
+			},
+			{
+				"name": "file_size_bytes",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "landing_path",
+				"type": "varchar"
+			},
+			{
+				"name": "raw_path",
+				"type": "varchar"
+			},
+			{
+				"name": "ingestion_status",
+				"type": "varchar"
+			},
+			{
+				"name": "pipeline_run_id",
+				"type": "varchar"
+			},
+			{
+				"name": "ingested_at",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ingestion_file_metadata"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

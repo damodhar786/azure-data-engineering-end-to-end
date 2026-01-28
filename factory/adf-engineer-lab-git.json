@@ -1,0 +1,9 @@
+{
+	"name": "adf-engineer-lab-git",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "35dc4e84-ff18-4b03-8357-df83a8de9d8a",
+		"tenantId": "9bad5cc6-64b8-4e09-9b48-e4a3f47f2801"
+	}
+}

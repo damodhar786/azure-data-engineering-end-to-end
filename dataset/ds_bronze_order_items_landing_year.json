@@ -1,0 +1,24 @@
+{
+	"name": "ds_bronze_order_items_landing_year",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_fmcg",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "fmcg_source/order_items/landing/2025",
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
