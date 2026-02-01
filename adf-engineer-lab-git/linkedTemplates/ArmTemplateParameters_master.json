@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-engineer-lab-git"
+		},
+		"ls_adls_fmcg_accountKey": {
+			"value": ""
+		},
+		"ls_sql_ingestion_metadata_password": {
+			"value": ""
+		},
+		"ls_adls_fmcg_properties_typeProperties_url": {
+			"value": "https://adlsdeprod01.dfs.core.windows.net/"
+		},
+		"ls_sql_ingestion_metadata_properties_typeProperties_server": {
+			"value": "sql-metadata-lab.database.windows.net"
+		},
+		"ls_sql_ingestion_metadata_properties_typeProperties_database": {
+			"value": "sqldb_ingestion_metadata"
+		},
+		"ls_sql_ingestion_metadata_properties_typeProperties_userName": {
+			"value": "data_engineer_sql"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
