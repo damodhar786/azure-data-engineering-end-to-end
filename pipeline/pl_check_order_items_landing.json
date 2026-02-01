@@ -272,7 +272,7 @@
 										"type": "String"
 									},
 									"ingestion_status": {
-										"value": "ingestion_status",
+										"value": "PROCESSED",
 										"type": "String"
 									}
 								}
