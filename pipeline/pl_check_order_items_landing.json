@@ -140,7 +140,7 @@
 							}
 						},
 						{
-							"name": "Execute Pipeline - pl_process_order_items_day",
+							"name": "ep_process_order_items_day",
 							"type": "ExecutePipeline",
 							"dependsOn": [
 								{
