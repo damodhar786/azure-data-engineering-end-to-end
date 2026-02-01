@@ -259,19 +259,20 @@
 							"typeProperties": {
 								"storedProcedureName": "[dbo].[sp_insert_ingestion_metadata]",
 								"storedProcedureParameters": {
-									"business_date": {
-										"type": "DateTime"
-									},
 									"entity_name": {
-										"value": "",
+										"value": "order_items",
+										"type": "String"
+									},
+									"business_date": {
+										"value": "2025-08-01",
 										"type": "String"
 									},
 									"file_name": {
-										"value": "",
+										"value": "order_items_2025-08-01.csv",
 										"type": "String"
 									},
 									"ingestion_status": {
-										"value": "",
+										"value": "ingestion_status",
 										"type": "String"
 									}
 								}
