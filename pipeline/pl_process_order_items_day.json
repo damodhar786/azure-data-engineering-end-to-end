@@ -149,6 +149,17 @@
 								"type": "LinkedServiceReference"
 							}
 						}
+					],
+					"ifTrueActivities": [
+						{
+							"name": "wt_skip_already_processed",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 1
+							}
+						}
 					]
 				}
 			}
