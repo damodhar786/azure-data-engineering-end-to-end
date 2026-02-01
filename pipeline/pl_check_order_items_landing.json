@@ -227,7 +227,7 @@
 							"typeProperties": {
 								"source": {
 									"type": "AzureSqlSource",
-									"sqlReaderQuery": "SELECT 1\nFROM ingestion_file_metadata\nWHERE entity_name = 'order_items'\n  AND business_date = '2025-08-01'\n  AND ingestion_status = 'PROCESSED';",
+									"sqlReaderQuery": "SELECT 1\nFROM ingestion_file_metadata\nWHERE entity_name = 'order_items'\n  AND business_date = '2025-08-01'\n  AND UPPER(ingestion_status) = 'PROCESSED';",
 									"queryTimeout": "02:00:00",
 									"partitionOption": "None"
 								},
