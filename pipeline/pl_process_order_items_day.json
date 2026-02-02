@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT COUNT(1) AS record_count\nFROM ingestion_file_metadata\nWHERE entity_name = 'order_items'\n  AND business_date = '2025-08-01'\n  AND UPPER(ingestion_status) = 'PROCESSED';",
+						"sqlReaderQuery": "SELECT COUNT(1) AS record_count\nFROM ingestion_file_metadata\nWHERE entity_name = 'order_items'\n  AND business_date = '@{pipeline().parameters.p_business_date}'\n  AND UPPER(ingestion_status) = 'PROCESSED';\n",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -131,11 +131,14 @@
 										"type": "String"
 									},
 									"business_date": {
-										"value": "2025-08-01",
+										"value": {
+											"value": "@pipeline().parameters.p_business_date",
+											"type": "Expression"
+										},
 										"type": "String"
 									},
 									"file_name": {
-										"value": "order_items_2025-08-01.csv",
+										"value": "@pipeline().parameters.p_file_name",
 										"type": "String"
 									},
 									"ingestion_status": {
@@ -164,6 +167,16 @@
 				}
 			}
 		],
+		"parameters": {
+			"p_business_date": {
+				"type": "string",
+				"defaultValue": "2025-08-01"
+			},
+			"p_file_name": {
+				"type": "string",
+				"defaultValue": "order_items_2025-08-01.csv"
+			}
+		},
 		"annotations": []
 	}
 }
