@@ -159,7 +159,11 @@
 									"referenceName": "pl_process_order_items_day",
 									"type": "PipelineReference"
 								},
-								"waitOnCompletion": true
+								"waitOnCompletion": true,
+								"parameters": {
+									"p_business_date": "2025-08-01",
+									"p_file_name": "order_items_2025-08-01.csv"
+								}
 							}
 						}
 					]
